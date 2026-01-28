@@ -92,19 +92,20 @@ const MotoGearRental: React.FC = () => {
       <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
         <header className="border-b border-gray-100 dark:border-gray-900">
           <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-4">
               <div className="flex items-center">
-                <img src={'logo_75.png'} className="max-h-26" />
-                {/* <div className="w-10 h-10 bg-black dark:bg-white rounded-full mr-3"></div> */}
-                <h1 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
-                  Аренда мотоэкипировки
-                </h1>
+                <img
+                  src={'logo_75.png'}
+                  className="max-h-26 bg-black rounded-2xl"
+                />
               </div>
               <div className="max-w-md">
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Профессиональная экипировка для безопасных поездок.
-                  Предоставляем чистые шлемы, защитные куртки и перчатки для
-                  города и трассы.
+                <h1 className="text-2xl sm:text-2xl text-center md:text-right font-bold text-black dark:text-white">
+                  Аренда мотоэкипировки
+                </h1>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-right mt-1">
+                  Профессиональная мотоэкипировка для безопасных поездок.
+                  Предоставляем шлемы, защитные куртки и перчатки для города.
                 </p>
               </div>
             </div>
@@ -165,8 +166,8 @@ const MotoGearRental: React.FC = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-1 space-y-4">
-              <div className="border border-gray-200 dark:border-gray-800 overflow-hidden">
+            <div className="lg:col-span-1 flex flex-col space-y-4">
+              <div className="border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col grow">
                 <div className="p-5">
                   <h2 className="text-lg font-bold text-black dark:text-white mb-4">
                     Контакты
@@ -210,7 +211,7 @@ const MotoGearRental: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="relative h-48 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+                <div className="grow min-h-75 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
                   <iframe
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f8cced29b2141c0d36e0322ade54708fb3a4233b9834e50509658a3aee70041&amp;source=constructor"
                     width="100%"

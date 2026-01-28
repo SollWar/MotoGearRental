@@ -1,2 +1,2 @@
-:HL["/KW_Rental/_next/static/chunks/2cab6c4460d02ab5.css","style"]
-0:{"buildId":"vN6uXgPlfIscKNPSZv2tJ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/kw-motoger-rental/_next/static/chunks/407ec49ae16017f7.css","style"]
+0:{"buildId":"jYk8ouqxp1qLRKwijI4pu","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

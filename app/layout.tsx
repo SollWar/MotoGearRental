@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Аренда мотоэкипировки в Балашихе | Мотоэкипировка в Балашихе',
+  title: 'KW Motogear — Аренда мотоэкипировки в Балашихе',
+  applicationName: 'KW Motogear — Аренда мотоэкипировки',
   description:
     'Прокат профессиональной мотоэкипировки: шлемы SMK/IXS, мотокуртки и перчатки. Цены от 300 руб/день. Залог 5000 руб. Работаем ежедневно с 10:00 до 19:00.',
   keywords: [
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KW Motogear — Аренда экипировки в Балашихе',
     description:
-      'Качественная защита для мотоциклистов. Шлемы, куртки и перчатки на любой срок.',
-    url: 'https://motoprokat.ru', // Замените на ваш домен
+      'Качественная защита для мотоциклистов. Шлемы, куртки и перчатки с возможностью выкупом.',
+    url: 'https://sollwar.github.io/KW_Rental', // Замените на ваш домен
     siteName: 'KW Motogear',
     locale: 'ru_RU',
     type: 'website',
