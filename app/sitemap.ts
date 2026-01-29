@@ -2,7 +2,7 @@ export const dynamic = 'force-static'
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://arenda.z3rg.ru' // Твой домен
+  const baseUrl = `https://${process.env.NEXT_PUBLIC_DOMAIN}` // Твой домен
 
   return [
     {

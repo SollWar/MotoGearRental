@@ -20,7 +20,7 @@ const MotoGearRental: React.FC = () => {
     name: 'KW Motogear',
     description:
       'Аренда профессиональной мотоэкипировки в Балашихе: шлемы, куртки, перчатки.',
-    url: 'https://motoprokat.ru', // Замените на ваш домен
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN}`, // Замените на ваш домен
     telephone: '+79252273901', // Замените на ваш номер
     address: {
       '@type': 'PostalAddress',

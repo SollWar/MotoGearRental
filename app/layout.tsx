@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KW Motogear — Аренда экипировки в Балашихе',
     description:
-      'Качественная защита для мотоциклистов. Шлемы, куртки и перчатки с возможностью выкупом.',
-    url: 'https://sollwar.github.io/KW_Rental', // Замените на ваш домен
+      'Качественная защита для мотоциклистов. Шлемы, куртки и перчатки с возможностью выкупа.',
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN}`, // Замените на ваш домен
     siteName: 'KW Motogear',
     locale: 'ru_RU',
     type: 'website',
