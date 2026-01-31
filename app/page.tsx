@@ -13,49 +13,217 @@ const MotoGearRental: React.FC = () => {
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
 
-  // Данные для JSON-LD
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'KW Motogear',
-    description:
-      'Аренда профессиональной мотоэкипировки в Балашихе: шлемы, куртки, перчатки.',
-    url: `https://${process.env.NEXT_PUBLIC_DOMAIN}`, // Замените на ваш домен
-    telephone: '+79252273901', // Замените на ваш номер
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress:
-        'ш. Энтузиастов, 1Б, территория Западная Коммунальная Зона',
-      addressLocality: 'Балашиха',
-      addressCountry: 'RU',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 55.783759,
-      longitude: 37.867869,
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '10:00',
-      closes: '19:00',
-    },
-    priceRange: '300-5000 RUB',
+    '@graph': [
+      {
+        '@type': 'LocalBusiness',
+        '@id': 'https://' + process.env.NEXT_PUBLIC_DOMAIN + '#business',
+        name: 'KW Motogear',
+        description:
+          'Аренда профессиональной мотоэкипировки в Балашихе: шлемы, куртки и перчатки.',
+        url: 'https://' + process.env.NEXT_PUBLIC_DOMAIN,
+        telephone: '+79252273901',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress:
+            'ш. Энтузиастов, 1Б, территория Западная Коммунальная Зона',
+          addressLocality: 'Балашиха',
+          addressCountry: 'RU',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 55.783759,
+          longitude: 37.867869,
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday',
+              'Sunday',
+            ],
+            opens: '10:00',
+            closes: '19:00',
+          },
+        ],
+        priceRange: '300–5100 RUB',
+        sameAs: ['https://vk.com/kwmotogear', 'https://t.me/KwElizabeth'],
+        image: ['meta_logo.jpg'],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Прайс аренды — KW Motogear',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда шлема SMK/IXS (1 день)',
+            },
+            price: '500',
+            priceCurrency: 'RUB',
+            eligibleDuration: {
+              '@type': 'Duration',
+              name: '1 день',
+              value: 'P1D',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Подшлемник (покупка обязательна)',
+            },
+            price: '600',
+            priceCurrency: 'RUB',
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда мотокуртки (1 день)',
+            },
+            price: '800',
+            priceCurrency: 'RUB',
+            eligibleDuration: {
+              '@type': 'Duration',
+              name: '1 день',
+              value: 'P1D',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда мотоперчаток (1 день)',
+            },
+            price: '300',
+            priceCurrency: 'RUB',
+            eligibleDuration: {
+              '@type': 'Duration',
+              name: '1 день',
+              value: 'P1D',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда шлема SMK/IXS (3 дня)',
+            },
+            price: '1200',
+            priceCurrency: 'RUB',
+            eligibleDuration: {
+              '@type': 'Duration',
+              name: '3 дня',
+              value: 'P3D',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда мотокуртки (3 дня)',
+            },
+            price: '2000',
+            priceCurrency: 'RUB',
+            eligibleDuration: { '@type': 'Duration', value: 'P3D' },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда мотоперчаток (3 дня)',
+            },
+            price: '700',
+            priceCurrency: 'RUB',
+            eligibleDuration: { '@type': 'Duration', value: 'P3D' },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда шлема SMK/IXS (1 неделя)',
+            },
+            price: '3000',
+            priceCurrency: 'RUB',
+            eligibleDuration: { '@type': 'Duration', value: 'P7D' },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда мотокуртки (1 неделя)',
+            },
+            price: '5100',
+            priceCurrency: 'RUB',
+            eligibleDuration: { '@type': 'Duration', value: 'P7D' },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Аренда мотоперчаток (1 неделя)',
+            },
+            price: '1600',
+            priceCurrency: 'RUB',
+            eligibleDuration: { '@type': 'Duration', value: 'P7D' },
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Какой залог требуется при аренде?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Обязательный залог 5000 ₽ для любого типа аренды. Залог возвращается при возврате экипировки в исправном состоянии.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Нужно ли покупать подшлемник?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Да — подшлемник приобретается отдельно (600 ₽), и его покупка обязательна.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Можно ли выкупить экипировку после аренды?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Да — возможен выкуп. Свяжитесь с нами по телефону для уточнения условий.',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Аренда мотоэкипировки',
+            item: 'https://' + process.env.NEXT_PUBLIC_DOMAIN,
+          },
+        ],
+      },
+    ],
   }
 
   const priceData = [
     {
       title: '1 день',
       items: [
-        { name: 'Подшлемник (покупка)', price: '600 ₽', highlight: true },
         { name: 'Аренда шлема SMK/IXS', price: '500 ₽' },
         { name: 'Аренда мотокуртки', price: '800 ₽' },
         { name: 'Аренда мотоперчаток', price: '300 ₽' },
@@ -64,7 +232,6 @@ const MotoGearRental: React.FC = () => {
     {
       title: '3 дня',
       items: [
-        { name: 'Подшлемник (покупка)', price: '600 ₽', highlight: true },
         { name: 'Аренда шлема SMK/IXS', price: '1 200 ₽' },
         { name: 'Аренда мотокуртки', price: '2 000 ₽' },
         { name: 'Аренда мотоперчаток', price: '700 ₽' },
@@ -73,7 +240,6 @@ const MotoGearRental: React.FC = () => {
     {
       title: '1 неделя',
       items: [
-        { name: 'Подшлемник (покупка)', price: '600 ₽', highlight: true },
         { name: 'Аренда шлема SMK/IXS', price: '3 000 ₽' },
         { name: 'Аренда мотокуртки', price: '5 100 ₽' },
         { name: 'Аренда мотоперчаток', price: '1 600 ₽' },
@@ -83,7 +249,6 @@ const MotoGearRental: React.FC = () => {
 
   return (
     <div className={theme === 'dark' ? 'dark' : ''}>
-      {/* Внедрение JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -104,8 +269,9 @@ const MotoGearRental: React.FC = () => {
                   Аренда мотоэкипировки
                 </h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-right mt-1">
-                  Профессиональная мотоэкипировка для безопасных поездок.
-                  Предоставляем шлемы, защитные куртки и перчатки для города.
+                  KW Motogear — сервис аренды мотоэкипировки в Балашихе. У нас
+                  вы можете взять в прокат мотошлемы SMK и IXS, мотокуртки и
+                  мотоперчатки для города.
                 </p>
               </div>
             </div>
@@ -131,11 +297,7 @@ const MotoGearRental: React.FC = () => {
                           className="flex justify-between items-start gap-2"
                         >
                           <span
-                            className={`text-sm ${
-                              item.highlight
-                                ? 'font-medium text-black dark:text-white'
-                                : 'text-gray-600 dark:text-gray-400'
-                            }`}
+                            className={`text-sm text-gray-700 dark:text-gray-300`}
                           >
                             {item.name}
                           </span>
@@ -150,18 +312,24 @@ const MotoGearRental: React.FC = () => {
               </div>
 
               <div className="border border-gray-200 dark:border-gray-800 p-5">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-black dark:text-white">
-                      Обязательный залог
-                    </h3>
-                    <p className="text-xs text-gray-500">
-                      Возвращается сразу после проверки
-                    </p>
-                  </div>
-                  <div className="text-xl font-mono font-bold text-black dark:text-white">
-                    5 000 ₽
-                  </div>
+                <div className="flex flex-col items-start justify-between">
+                  <h2 className="text-lg font-bold mb-4 text-black dark:text-white">
+                    Условия аренды мотоэкипировки
+                  </h2>
+                  <ul className="list-none space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                    <li className="font-medium text-black dark:text-white">
+                      Обязательный залог — 5 000 ₽ (возвращается при возврате
+                      без повреждений).
+                    </li>
+                    <li className="font-medium text-black dark:text-white">
+                      Подшлемник приобретается отдельно — 600 ₽ (обязательно для
+                      шлема).
+                    </li>
+                    <li>Аренда доступна на 1 день, 3 дня или 1 неделю.</li>
+                    <li>
+                      Выдача и возврат экипировки — ежедневно с 10:00 до 19:00.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

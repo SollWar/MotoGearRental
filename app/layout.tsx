@@ -3,30 +3,41 @@ import './globals.css'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'KW Motogear — Аренда мотоэкипировки в Балашихе',
-
-  applicationName: 'KW Motogear — Аренда мотоэкипировки',
+  metadataBase: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
+  title: {
+    default: 'Аренда мотоэкипировки в Балашихе — KW Motogear',
+    template: '%s — KW Motogear',
+  },
+  applicationName: 'KW Motogear',
+  alternates: {
+    canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
+  },
   description:
-    'Прокат профессиональной мотоэкипировки: шлемы SMK/IXS, мотокуртки и перчатки. Цены от 300 руб/день. Залог 5000 руб. Работаем ежедневно с 10:00 до 19:00.',
+    'Аренда шлемов, мотокурток и перчаток в Балашихе — от 300 ₽/день. Залог 5000 ₽. Работаем ежедневно 10:00–19:00. Тел: +7 (925) 227-3901.',
   keywords: [
-    'аренда мотоэкипировки',
-    'прокат мотошлема Балашиха',
+    'аренда мотоэкипировки Балашиха',
+    'прокат мотошлемов',
     'аренда мотокуртки',
     'аренда мотоперчаток',
-    'мотошлемы в аренду',
-    'мотокуртки в прокат',
-    'мотоперчатки напрокат',
-    'мотоэкипировка Балашиха',
-    'прокат мотоэкипировки Балашиха',
+    'прокат экипировки',
+    'KW Motogear',
   ],
   openGraph: {
     title: 'KW Motogear — Аренда экипировки в Балашихе',
     description:
-      'Качественная защита для мотоциклистов. Шлемы, куртки и перчатки с возможностью выкупа.',
-    url: `https://${process.env.NEXT_PUBLIC_DOMAIN}`, // Замените на ваш домен
+      'Качественная защита для мотоциклистов: шлемы SMK/IXS, мотокуртки и перчатки. Цены от 300 ₽/день. Залог 5000 ₽.',
+    url: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
     siteName: 'KW Motogear',
     locale: 'ru_RU',
     type: 'website',
+    images: [
+      {
+        url: 'meta_logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'KW Motogear — аренда мотоэкипировки в Балашихе',
+      },
+    ],
   },
   robots: {
     index: true,
