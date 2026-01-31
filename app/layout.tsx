@@ -4,6 +4,7 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'KW Motogear — Аренда мотоэкипировки в Балашихе',
+
   applicationName: 'KW Motogear — Аренда мотоэкипировки',
   description:
     'Прокат профессиональной мотоэкипировки: шлемы SMK/IXS, мотокуртки и перчатки. Цены от 300 руб/день. Залог 5000 руб. Работаем ежедневно с 10:00 до 19:00.',
@@ -44,6 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+      </head>
       <body>
         {children}
         <Script id="yandex-metrika" strategy="afterInteractive">
