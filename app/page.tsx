@@ -21,7 +21,7 @@ const MotoGearRental: React.FC = () => {
         '@id': 'https://' + process.env.NEXT_PUBLIC_DOMAIN + '#business',
         name: 'KW Motogear',
         description:
-          'Аренда профессиональной мотоэкипировки в Балашихе: шлемы, куртки и перчатки.',
+          'Аренда/прокат профессиональной мотоэкипировки в Балашихе: шлемы, куртки и перчатки.',
         url: 'https://' + process.env.NEXT_PUBLIC_DOMAIN,
         telephone: '+79252273901',
         address: {
@@ -201,7 +201,7 @@ const MotoGearRental: React.FC = () => {
             name: 'Можно ли выкупить экипировку после аренды?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Да — возможен выкуп. Свяжитесь с нами по телефону для уточнения условий.',
+              text: 'Да — возможен выкуп. Свяжитесь с нами для уточнения условий.',
             },
           },
         ],

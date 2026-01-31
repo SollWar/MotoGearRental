@@ -5,7 +5,7 @@ import Script from 'next/script'
 export const metadata: Metadata = {
   metadataBase: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
   title: {
-    default: 'Аренда мотоэкипировки в Балашихе — KW Motogear',
+    default: 'Аренда/прокат мотоэкипировки в Балашихе — KW Motogear',
     template: '%s — KW Motogear',
   },
   applicationName: 'KW Motogear',
@@ -13,17 +13,17 @@ export const metadata: Metadata = {
     canonical: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
   },
   description:
-    'Аренда шлемов, мотокурток и перчаток в Балашихе — от 300 ₽/день. Залог 5000 ₽. Работаем ежедневно 10:00–19:00. Тел: +7 (925) 227-3901.',
+    'Аренда/прокат шлемов, мотокурток и перчаток в Балашихе — от 300 ₽/день. Залог 5000 ₽. Работаем ежедневно 10:00–19:00. Тел: +7 (925) 227-3901.',
   keywords: [
-    'аренда мотоэкипировки Балашиха',
-    'прокат мотошлемов',
-    'аренда мотокуртки',
-    'аренда мотоперчаток',
-    'прокат экипировки',
+    'аренда/прокат мотоэкипировки Балашиха',
+    'аренда/прокат мотоэкипа',
+    'аренда/прокат мотошлемов',
+    'аренда/прокат мотокуртки',
+    'аренда/прокат мотоперчаток',
     'KW Motogear',
   ],
   openGraph: {
-    title: 'KW Motogear — Аренда экипировки в Балашихе',
+    title: 'Аренда/прокат мотоэкипировки в Балашихе — KW Motogear',
     description:
       'Качественная защита для мотоциклистов: шлемы SMK/IXS, мотокуртки и перчатки. Цены от 300 ₽/день. Залог 5000 ₽.',
     url: `https://${process.env.NEXT_PUBLIC_DOMAIN}`,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: 'meta_logo.jpg',
         width: 1200,
         height: 630,
-        alt: 'KW Motogear — аренда мотоэкипировки в Балашихе',
+        alt: 'KW Motogear — аренда/прокат мотоэкипировки в Балашихе',
       },
     ],
   },
