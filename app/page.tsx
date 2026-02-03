@@ -20,25 +20,25 @@ const MotoGearRental: React.FC = () => {
     {
       title: '1 день',
       items: [
-        { name: 'Аренда шлема SMK/IXS', price: '500 ₽' },
-        { name: 'Аренда мотокуртки', price: '800 ₽' },
-        { name: 'Аренда мотоперчаток', price: '300 ₽' },
+        { name: 'Аренда шлема SMK/AIM', price: '600 ₽' },
+        { name: 'Аренда мотокуртки', price: '900 ₽' },
+        { name: 'Аренда мотоперчаток', price: '400 ₽' },
       ],
     },
     {
       title: '3 дня',
       items: [
-        { name: 'Аренда шлема SMK/IXS', price: '1 200 ₽' },
-        { name: 'Аренда мотокуртки', price: '2 000 ₽' },
-        { name: 'Аренда мотоперчаток', price: '700 ₽' },
+        { name: 'Аренда шлема SMK/AIM', price: '1 500 ₽' },
+        { name: 'Аренда мотокуртки', price: '2 400 ₽' },
+        { name: 'Аренда мотоперчаток', price: '900 ₽' },
       ],
     },
     {
       title: '1 неделя',
       items: [
-        { name: 'Аренда шлема SMK/IXS', price: '3 000 ₽' },
-        { name: 'Аренда мотокуртки', price: '5 100 ₽' },
-        { name: 'Аренда мотоперчаток', price: '1 600 ₽' },
+        { name: 'Аренда шлема SMK/AIM', price: '3 700 ₽' },
+        { name: 'Аренда мотокуртки', price: '5 800 ₽' },
+        { name: 'Аренда мотоперчаток', price: '2 300 ₽' },
       ],
     },
   ]
@@ -66,7 +66,7 @@ const MotoGearRental: React.FC = () => {
                 </h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-right mt-1">
                   KW Motogear — сервис аренды мотоэкипировки в Балашихе. У нас
-                  вы можете взять в прокат мотошлемы SMK и IXS, мотокуртки и
+                  вы можете взять в прокат мотошлемы SMK и AIM, мотокуртки и
                   мотоперчатки для города.
                 </p>
               </div>
@@ -109,17 +109,36 @@ const MotoGearRental: React.FC = () => {
 
               <div className="border border-gray-200 dark:border-gray-800 p-5">
                 <div className="flex flex-col items-start justify-between">
-                  <h2 className="text-lg font-bold mb-4 text-black dark:text-white">
-                    Условия аренды мотоэкипировки
+                  <h2 className="text-lg font-bold mb-4 text-black dark:text-white w-full flex flex-row justify-between">
+                    <div> Условия аренды мотоэкипировки</div>
+                    <a
+                      href="ДОГОВОР ПРОКАТА.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      Открыть договор
+                    </a>
                   </h2>
                   <ul className="list-none space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                    <li className="font-medium text-black dark:text-white">
-                      Обязательный залог — 5 000 ₽ (возвращается при возврате
-                      без повреждений).
+                    <li className=" text-black dark:text-white">
+                      <span className="font-bold">
+                        Залог 5 000 ₽ (наличными){' '}
+                      </span>
+                      — возвращается при успешной / неповреждённой сдачи
+                      арендованной экипировки в магазин.
                     </li>
-                    <li className="font-medium text-black dark:text-white">
-                      Подшлемник приобретается отдельно — 600 ₽ (обязательно для
-                      шлема).
+                    <li className=" text-black dark:text-white">
+                      <span className="font-bold">Подшлемник 600 ₽ </span> —
+                      приобретается отдельно, обязателен при аренде шлема.
+                    </li>
+                    <li className="text-black dark:text-white">
+                      Сдать экипировку необходимо не позднее, чем через
+                      <span className="font-bold"> 1 сутки и 1 час</span> от
+                      указанного времени в бланке «заказ на бронирование» — в
+                      противном случае обязательный залог будет удержан в
+                      размере 1/2 залоговой стоимости за несоблюдение условий
+                      договора, а именно в размере 2 500 ₽.
                     </li>
                     <li>Аренда доступна на 1 день, 3 дня или 1 неделю.</li>
                     <li>

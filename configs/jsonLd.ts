@@ -38,7 +38,7 @@ export const getJsonLd = (domain: string | undefined) => {
             closes: '19:00',
           },
         ],
-        priceRange: '300–5100 RUB',
+        priceRange: '400–5800 RUB',
         sameAs: ['https://vk.com/kwmotogear', 'https://t.me/KwElizabeth'],
         image: [`https://${domain}/meta_logo.jpg`],
         hasOfferCatalog: {
@@ -51,11 +51,11 @@ export const getJsonLd = (domain: string | undefined) => {
               position: 1,
               item: {
                 '@type': 'Product',
-                name: 'Аренда шлема SMK/IXS (1 день)',
+                name: 'Аренда шлема SMK/AIM (1 день)',
                 image: 'helmet.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '500',
+                  price: '600',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P1D' },
@@ -90,7 +90,7 @@ export const getJsonLd = (domain: string | undefined) => {
                 image: 'jacket.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '800',
+                  price: '900',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P1D' },
@@ -108,7 +108,7 @@ export const getJsonLd = (domain: string | undefined) => {
                 image: 'gloves.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '300',
+                  price: '400',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P1D' },
@@ -122,11 +122,11 @@ export const getJsonLd = (domain: string | undefined) => {
               position: 5,
               item: {
                 '@type': 'Product',
-                name: 'Аренда шлема SMK/IXS (3 дня)',
+                name: 'Аренда шлема SMK/AIM (3 дня)',
                 image: 'helmet.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '1200',
+                  price: '1500',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P3D' },
@@ -144,7 +144,7 @@ export const getJsonLd = (domain: string | undefined) => {
                 image: 'jacket.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '2000',
+                  price: '2400',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P3D' },
@@ -162,7 +162,7 @@ export const getJsonLd = (domain: string | undefined) => {
                 image: 'gloves.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '700',
+                  price: '900',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P3D' },
@@ -176,11 +176,11 @@ export const getJsonLd = (domain: string | undefined) => {
               position: 8,
               item: {
                 '@type': 'Product',
-                name: 'Аренда шлема SMK/IXS (1 неделя)',
+                name: 'Аренда шлема SMK/AIM (1 неделя)',
                 image: 'helmet.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '3000',
+                  price: '3700',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P7D' },
@@ -198,7 +198,7 @@ export const getJsonLd = (domain: string | undefined) => {
                 image: 'jacket.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '5100',
+                  price: '5800',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P7D' },
@@ -216,7 +216,7 @@ export const getJsonLd = (domain: string | undefined) => {
                 image: 'gloves.jpg',
                 offers: {
                   '@type': 'Offer',
-                  price: '1600',
+                  price: '2300',
                   priceCurrency: 'RUB',
                   availability: 'https://schema.org/InStock',
                   eligibleDuration: { '@type': 'Duration', value: 'P7D' },
@@ -235,7 +235,7 @@ export const getJsonLd = (domain: string | undefined) => {
             name: 'Какой залог требуется при аренде?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Обязательный залог 5000 ₽ для любого типа аренды. Залог возвращается при возврате экипировки в исправном состоянии.',
+              text: 'Обязательный залог 5000₽ наличными для любого типа аренды. Возвращается при успешной / неповреждённой сдачи арендованной экипировки в магазин',
             },
           },
           {
